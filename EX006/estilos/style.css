@@ -1,0 +1,45 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to top, rgb(4, 43, 159), rgb(4, 43, 159));
+}
+body header{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+body header h1 {
+    text-shadow: 2px 1px 1px rgb(0, 0, 0);
+}
+body main {
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+}
+body main section {
+    background-color: rgb(129, 129, 207);
+    padding: 10px;
+    border-radius: 5px;
+}
+body main form input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+}
+body main form input[type="submit"] {
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+body main form input[type="submit"]:hover {
+    background-color: rgb(4, 197, 4);
+}
+body main p {
+    margin: 5px;
+}
