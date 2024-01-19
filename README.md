@@ -42,4 +42,8 @@ sudo mysql_secure_installation
 ```
 sudo apt install phpmyadmin
 ```
+>Faça um **link simbólico** para acessar no localhost
+```
+sudo ln -s /usr/share/phpmyadmin/ /var/www/html/
+```
 ### Texto produzido por: [Aislan Penha](https://github.com/AislanPenha)
