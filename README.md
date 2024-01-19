@@ -38,4 +38,8 @@ sudo mysql_secure_installation
 >
 >**mysql_secure_installation** configura o banco de dados
 >
+## Instalar o PHPMyAdmin
+```
+sudo apt install phpmyadmin
+```
 ### Texto produzido por: [Aislan Penha](https://github.com/AislanPenha)
