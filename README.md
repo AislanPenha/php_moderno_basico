@@ -102,4 +102,33 @@ Mude o valor www-data para seu usuário.
 export APACHE_RUN_USER=aislan
 export APACHE_RUN_GROUP=aislan
 ```
+# Conexão do PHP com o Banco de Dados
+### Comando do nano
+```
+`nano -c`
+```
+>para olhar a linha no nano
+## Comando do MySQL
+```
+mysql -u root -p
+show databases;
+create database BANCO_DADO;
+use BANCO_DADO;
+show tables;
+create table alunos (cod int auto_increment, nome varchar(20), primary key(cod));
+desc alunos;
+insert into alunos (nomes) values  ('aislan'),  ('alisson'),  ('cata');
+```
+## Comando do Conexão do banco de dados com o PHP
+~~~php
 
+$serv = new mysqli("localhost", "root", "SENHA_BANCO_DADOS", "BANCO_DADOS")
+or die("Falha ao acessar servidor.");
+$busca = $serv->query("SELECT * FROM alunos ORDER BY nome");
+$total = $serv->affected_rows;
+echo "<p>Foram encontrados $total pessoas cadastradas.</p>;
+while ($dado = $busca->fetch_object()) {
+        echo "<p>$dado->nome</p>";
+}
+$serv->close();
+~~~
