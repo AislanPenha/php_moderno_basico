@@ -89,16 +89,17 @@ sudo service apache2 restart
 ```
 Se der acesso negado
 
-![Captura de tela de 2024-01-19 14-54-14](https://github.com/AislanPenha/php_moderno_basico/assets/130594608/5e3218b8-4f74-4659-b464-c4561a2ff818)
-Altere o arquivo /etc/apache2/envvars
+![novo](https://github.com/AislanPenha/php_moderno_basico/assets/130594608/b2e62f2c-dbe3-446a-aa40-869620956953)
 ```
 sudo nano /etc/apache2/envvars
 ```
 > export APACHE_RUN_USER=www-data
 > 
 > export APACHE_RUN_GROUP=www-data
-```
+
 Mude o valor www-data para seu usuário.
-> export APACHE_RUN_USER=aislan
-> 
-> export APACHE_RUN_GROUP=aislan
+```
+export APACHE_RUN_USER=aislan
+export APACHE_RUN_GROUP=aislan
+```
+
