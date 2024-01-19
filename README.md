@@ -13,6 +13,19 @@ sudo apt install php libapache2-mod-php php-mbstring
 >**libapache2-mob-php** conexão do apache com o php
 >
 >**php-mbstring** multibyte string codificar UTF-8
+### Quando não mostrar erro e a open short tag não pega
+Entrar no aquivo php.ini e editar:
+```
+sudo nano /etc/php/<versao>/apache2/php.ini
+```
+> `display_erros = On` para exibir os erros do apache
+> 
+> `short_open_tag = On` para habilitar a opn tag
+
+E reinicie o serviço
+```
+sudo service apache2 restart
+```
 ## Instalar e configurar o Banco de dados
 ```
 sudo apt install maridab-server php-mysql
