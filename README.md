@@ -26,6 +26,14 @@ E reinicie o serviço
 ```
 sudo service apache2 restart
 ```
+### Instalar a biblioteca intl (Internationalization PHP)
+```
+sudo apt install php-intl
+```
+E reinicie o serviço
+```
+sudo service apache2 restart
+```
 ## Instalar e configurar o Banco de dados
 ```
 sudo apt install maridab-server php-mysql
