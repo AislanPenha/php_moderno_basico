@@ -140,3 +140,32 @@ while ($dado = $busca->fetch_object()) {
 }
 $serv->close();
 ~~~
+## ERRO de cache PHPMyAdmin
+```
+O $cfg['TempDir'](/var/lib/phpmyadmin/tmp/) não está acessível. phpMyAdmin não será capaz de cachear os modelos e deve ficar mais lento por causa disso.
+```
+acrescentar a última linha abaixo no local que será a pasta temporária no arquivo /etc/phpmyadmin/config.inc.php
+```
+...
+/*
+ * Directories for saving/loading files from server
+ */
+$cfg['UploadDir'] = '';
+$cfg['SaveDir'] = '';
+$cfg['TempDir'] = '/home/aislan/Documentos/temp';
+...
+```
+## ERROR Opções de autenticação de cookies (blowfish_secret)
+```
+O arquivo de configuração precisa de uma chave válida para a criptografia de cookie. Uma chave temporária foi gerada automaticamente para você. Por favor, consulte a documentação.
+```
+Procurar a linha abaixo no arquivo /etc/phpmyadmin/config.inc.php
+```// Load secret generated on postinst
+if (check_file_access('/var/lib/phpmyadmin/blowfish_secret.inc.php')) {
+    require('/var/lib/phpmyadmin/blowfish_secret.inc.php');
+}
+```
+e liberar o acesso do arquivo blowfish_secret.inc.php
+```
+chmod 777 blowfish_secret.inc.php
+```
